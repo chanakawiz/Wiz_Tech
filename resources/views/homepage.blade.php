@@ -51,49 +51,60 @@
 </head>
 <body>
 
-<!-- Header -->
-<header id="masthead" class="site-header">
-    <nav id="primary-navigation" class="site-navigation" data-spy="affix">
-        <div class="container">
-            <div class="navbar-header page-scroll">
+{{--<!-- Header -->--}}
+{{--<header id="masthead" class="site-header">--}}
+{{--    <nav id="primary-navigation" class="site-navigation" data-spy="affix">--}}
+{{--        <div class="container">--}}
+{{--            <div class="navbar-header page-scroll">--}}
 
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#portfolio-perfect-collapse" aria-expanded="false" >
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+{{--                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#portfolio-perfect-collapse" aria-expanded="false" >--}}
+{{--                    <span class="icon-bar"></span>--}}
+{{--                    <span class="icon-bar"></span>--}}
+{{--                    <span class="icon-bar"></span>--}}
+{{--                </button>--}}
 
-                <!-- Name -->
-                <div class="page-scroll site-logo">
-                    <a href="#top">WIZ TECH</a>
-                </div>
+{{--                <!-- Name -->--}}
+{{--                <div class="page-scroll site-logo">--}}
+{{--                    <a href="#top">WIZ TECH</a>--}}
+{{--                </div>--}}
 
-            </div><!-- /.navbar-header -->
+{{--            </div><!-- /.navbar-header -->--}}
 
-            <div class="main-menu collapse navbar-collapse" id="portfolio-perfect-collapse">
+{{--            <div class="main-menu collapse navbar-collapse" id="portfolio-perfect-collapse">--}}
 
-                <!-- Navigation -->
-                <ul class="nav navbar-nav navbar-right">
+{{--                <!-- Navigation -->--}}
+{{--                <ul class="nav navbar-nav navbar-right">--}}
 
-                    <li class="page-scroll"><a href="#top">Home</a></li>
-                    <li class="page-scroll"><a href="#intro">Intro</a></li>
-                    <li class="page-scroll"><a href="#about">About</a></li>
-                    <li class="page-scroll"><a href="#services">Services</a></li>
-                    <li class="page-scroll"><a href="#team">Team</a></li>
-                    <li class="page-scroll"><a href="#history">History</a></li>
-                    <li class="page-scroll"><a href="#works">Works</a></li>
-                    <li class="page-scroll"><a href="#contact">Contact</a></li>
+{{--                    <li class="page-scroll"><a href="#top">Home</a></li>--}}
+{{--                    <li class="page-scroll"><a href="#intro">Intro</a></li>--}}
+{{--                    <li class="page-scroll"><a href="#about">About</a></li>--}}
+{{--                    <li class="page-scroll"><a href="#services">Services</a></li>--}}
+{{--                    <li class="page-scroll"><a href="#team">Team</a></li>--}}
+{{--                    <li class="page-scroll"><a href="#history">History</a></li>--}}
+{{--                    <li class="page-scroll"><a href="#works">Works</a></li>--}}
+{{--                    <li class="page-scroll"><a href="#contact">Contact</a></li>--}}
 
-                </ul><!-- /.navbar-nav -->
+{{--                    @if(Auth::user())--}}
+{{--                        <li class="page-scroll"><a href="#contact">{{ Auth::user()->name }}</a></li>--}}
+{{--                    @endif--}}
 
-            </div><!-- /.navbar-collapse -->
-        </div>
-    </nav><!-- /.primary-navigation -->
-</header><!-- /#header -->
-<!-- End Header -->
+{{--                </ul><!-- /.navbar-nav -->--}}
+
+{{--            </div><!-- /.navbar-collapse -->--}}
+{{--        </div>--}}
+{{--    </nav><!-- /.primary-navigation -->--}}
+{{--</header><!-- /#header -->--}}
+{{--<!-- End Header -->--}}
+
+
+@include(' navbar')
+
 
 <!-- Hero Section, Background Image change in css -->
 <div id="top" class="hero background-overlay">
+
+
+
 
     <!-- Name & Description -->
     <div class="hero-content">
@@ -218,60 +229,60 @@
     </section><!-- /.section-about -->
     <!-- End About section -->
 
-    <!-- Skills section -->
-    <section class="site-section section-skills">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2>Introduction video</h2>
-                    <iframe src="https://player.vimeo.com/video/158928871" width="100%" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
-                <div class="col-sm-6">
-                    <h2>SKILLS WE GOT</h2>
-                    <div class="progress-group">
-                        <p>Web design</p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" data-transitiongoal="100">
-                            </div>
-                        </div><!-- /.progress -->
-                    </div><!-- /.progress-group -->
+{{--    <!-- Skills section -->--}}
+{{--    <section class="site-section section-skills">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-sm-6">--}}
+{{--                    <h2>Introduction video</h2>--}}
+{{--                    <iframe src="https://player.vimeo.com/video/158928871" width="100%" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>--}}
+{{--                </div>--}}
+{{--                <div class="col-sm-6">--}}
+{{--                    <h2>SKILLS WE GOT</h2>--}}
+{{--                    <div class="progress-group">--}}
+{{--                        <p>Web design</p>--}}
+{{--                        <div class="progress">--}}
+{{--                            <div class="progress-bar" role="progressbar" data-transitiongoal="100">--}}
+{{--                            </div>--}}
+{{--                        </div><!-- /.progress -->--}}
+{{--                    </div><!-- /.progress-group -->--}}
 
-                    <div class="progress-group">
-                        <p>Web development</p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" data-transitiongoal="100">
-                            </div>
-                        </div><!-- /.progress -->
-                    </div><!-- /.progress-group -->
+{{--                    <div class="progress-group">--}}
+{{--                        <p>Web development</p>--}}
+{{--                        <div class="progress">--}}
+{{--                            <div class="progress-bar" role="progressbar" data-transitiongoal="100">--}}
+{{--                            </div>--}}
+{{--                        </div><!-- /.progress -->--}}
+{{--                    </div><!-- /.progress-group -->--}}
 
-                    <div class="progress-group">
-                        <p>Mobile Development</p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" data-transitiongoal="95">
-                            </div>
-                        </div><!-- /.progress -->
-                    </div><!-- /.progress-group -->
+{{--                    <div class="progress-group">--}}
+{{--                        <p>Mobile Development</p>--}}
+{{--                        <div class="progress">--}}
+{{--                            <div class="progress-bar" role="progressbar" data-transitiongoal="95">--}}
+{{--                            </div>--}}
+{{--                        </div><!-- /.progress -->--}}
+{{--                    </div><!-- /.progress-group -->--}}
 
-                    <div class="progress-group">
-                        <p>SEO optimization</p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" data-transitiongoal="100">
-                            </div>
-                        </div><!-- /.progress -->
-                    </div><!-- /.progress-group -->
+{{--                    <div class="progress-group">--}}
+{{--                        <p>SEO optimization</p>--}}
+{{--                        <div class="progress">--}}
+{{--                            <div class="progress-bar" role="progressbar" data-transitiongoal="100">--}}
+{{--                            </div>--}}
+{{--                        </div><!-- /.progress -->--}}
+{{--                    </div><!-- /.progress-group -->--}}
 
-                    <div class="progress-group">
-                        <p>Social Media</p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" data-transitiongoal="90">
-                            </div>
-                        </div><!-- /.progress -->
-                    </div><!-- /.progress-group -->
-                </div>
-            </div>
-        </div>
-    </section><!-- /.section-skills -->
-    <!-- End Skills section -->
+{{--                    <div class="progress-group">--}}
+{{--                        <p>Social Media</p>--}}
+{{--                        <div class="progress">--}}
+{{--                            <div class="progress-bar" role="progressbar" data-transitiongoal="90">--}}
+{{--                            </div>--}}
+{{--                        </div><!-- /.progress -->--}}
+{{--                    </div><!-- /.progress-group -->--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section><!-- /.section-skills -->--}}
+{{--    <!-- End Skills section -->--}}
 
     <!-- Counters section -->
     <section class="site-section section-counters text-center">
@@ -636,96 +647,96 @@
     </section><!-- /.section-team -->
     <!-- End Team section -->
 
-    <!-- History section -->
-    <section class="section-history" id="history">
-        <div class="container">
-            <div class="text-center section-diff-title">
-                <h2>A Look Back At Our History</h2>
-                <p>This my Education and Experience</p>
-            </div>
-            <!-- Timeline -->
-            <ul class="timeline">
-                <!-- Timeline badge -->
-                <li class="timeline-start">
-                    <div class="rectangle"><span>2016</span></div>
-                </li><!-- /.timeline-start -->
+{{--    <!-- History section -->--}}
+{{--    <section class="section-history" id="history">--}}
+{{--        <div class="container">--}}
+{{--            <div class="text-center section-diff-title">--}}
+{{--                <h2>A Look Back At Our History</h2>--}}
+{{--                <p>This my Education and Experience</p>--}}
+{{--            </div>--}}
+{{--            <!-- Timeline -->--}}
+{{--            <ul class="timeline">--}}
+{{--                <!-- Timeline badge -->--}}
+{{--                <li class="timeline-start">--}}
+{{--                    <div class="rectangle"><span>2016</span></div>--}}
+{{--                </li><!-- /.timeline-start -->--}}
 
-                <!-- Timeline job & description  -->
-                <li>
-                    <div class="rectangle timeline-rectangle"></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <div class="timeline-date">
-                                <p>13 sep</p>
-                            </div><!-- /.timeline-date -->
-                            <div class="timeline-position">
-                                <p>Web design &amp; Development</p>
-                            </div><!-- /.timeline-position -->
-                        </div><!-- /.timeline-heading -->
-                        <div class="timeline-body">
-                            <div class="timeline-body-thumb">
-                                <img src="assets/img/timeline-img.jpg" class="img-res" alt="">
-                            </div><!-- /.timeline-body-thumb -->
-                            <p>Designing and developing a Wordpress Website</p>
-                        </div><!-- /.timeline-body -->
-                    </div><!-- /.timeline-panel -->
-                </li>
+{{--                <!-- Timeline job & description  -->--}}
+{{--                <li>--}}
+{{--                    <div class="rectangle timeline-rectangle"></div>--}}
+{{--                    <div class="timeline-panel">--}}
+{{--                        <div class="timeline-heading">--}}
+{{--                            <div class="timeline-date">--}}
+{{--                                <p>13 sep</p>--}}
+{{--                            </div><!-- /.timeline-date -->--}}
+{{--                            <div class="timeline-position">--}}
+{{--                                <p>Web design &amp; Development</p>--}}
+{{--                            </div><!-- /.timeline-position -->--}}
+{{--                        </div><!-- /.timeline-heading -->--}}
+{{--                        <div class="timeline-body">--}}
+{{--                            <div class="timeline-body-thumb">--}}
+{{--                                <img src="assets/img/timeline-img.jpg" class="img-res" alt="">--}}
+{{--                            </div><!-- /.timeline-body-thumb -->--}}
+{{--                            <p>Designing and developing a Wordpress Website</p>--}}
+{{--                        </div><!-- /.timeline-body -->--}}
+{{--                    </div><!-- /.timeline-panel -->--}}
+{{--                </li>--}}
 
-                <!-- Timeline badge -->
-                <li class="timeline-start">
-                    <div class="rectangle"><span>2017</span></div>
-                </li><!-- /.timeline-start -->
+{{--                <!-- Timeline badge -->--}}
+{{--                <li class="timeline-start">--}}
+{{--                    <div class="rectangle"><span>2017</span></div>--}}
+{{--                </li><!-- /.timeline-start -->--}}
 
-                <!-- Timeline job & description, inverted  -->
-                <li class="timeline-inverted">
-                    <div class="rectangle timeline-rectangle"></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <div class="timeline-position">
-                                <p>Web Design</p>
-                            </div><!-- /.timeline-position -->
-                            <div class="timeline-date">
-                                <p>5 Jan</p>
-                            </div><!-- /.timeline-date -->
-                        </div><!-- /.timeline-heading -->
-                        <div class="timeline-body">
-                            <div class="timeline-body-thumb">
-                                <img src="assets/img/timeline-img.jpg" class="img-res" alt="">
-                            </div><!-- /.timeline-body-thumb -->
-                            <p>Designing a solution for mobile app</p>
-                        </div><!-- /.timeline-body -->
-                    </div><!-- /.timeline-panel -->
-                </li><!-- /.timeline-inverted -->
+{{--                <!-- Timeline job & description, inverted  -->--}}
+{{--                <li class="timeline-inverted">--}}
+{{--                    <div class="rectangle timeline-rectangle"></div>--}}
+{{--                    <div class="timeline-panel">--}}
+{{--                        <div class="timeline-heading">--}}
+{{--                            <div class="timeline-position">--}}
+{{--                                <p>Web Design</p>--}}
+{{--                            </div><!-- /.timeline-position -->--}}
+{{--                            <div class="timeline-date">--}}
+{{--                                <p>5 Jan</p>--}}
+{{--                            </div><!-- /.timeline-date -->--}}
+{{--                        </div><!-- /.timeline-heading -->--}}
+{{--                        <div class="timeline-body">--}}
+{{--                            <div class="timeline-body-thumb">--}}
+{{--                                <img src="assets/img/timeline-img.jpg" class="img-res" alt="">--}}
+{{--                            </div><!-- /.timeline-body-thumb -->--}}
+{{--                            <p>Designing a solution for mobile app</p>--}}
+{{--                        </div><!-- /.timeline-body -->--}}
+{{--                    </div><!-- /.timeline-panel -->--}}
+{{--                </li><!-- /.timeline-inverted -->--}}
 
-                <!-- Timeline job & description  -->
-                <li>
-                    <div class="rectangle timeline-rectangle"></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <div class="timeline-date">
-                                <p>25 Aug</p>
-                            </div><!-- /.timeline-date -->
-                            <div class="timeline-position">
-                                <p>Seo Optimization</p>
-                            </div><!-- /.timeline-position -->
-                        </div><!-- /.timeline-heading -->
-                        <div class="timeline-body">
-                            <div class="timeline-body-thumb">
-                                <img src="assets/img/timeline-img.jpg" class="img-res" alt="">
-                            </div><!-- /.timeline-body-thumb -->
-                            <p>SEO optimizing a couple of websites</p>
-                        </div><!-- /.timeline-body -->
-                    </div><!-- /.timeline-panel -->
-                </li>
+{{--                <!-- Timeline job & description  -->--}}
+{{--                <li>--}}
+{{--                    <div class="rectangle timeline-rectangle"></div>--}}
+{{--                    <div class="timeline-panel">--}}
+{{--                        <div class="timeline-heading">--}}
+{{--                            <div class="timeline-date">--}}
+{{--                                <p>25 Aug</p>--}}
+{{--                            </div><!-- /.timeline-date -->--}}
+{{--                            <div class="timeline-position">--}}
+{{--                                <p>Seo Optimization</p>--}}
+{{--                            </div><!-- /.timeline-position -->--}}
+{{--                        </div><!-- /.timeline-heading -->--}}
+{{--                        <div class="timeline-body">--}}
+{{--                            <div class="timeline-body-thumb">--}}
+{{--                                <img src="assets/img/timeline-img.jpg" class="img-res" alt="">--}}
+{{--                            </div><!-- /.timeline-body-thumb -->--}}
+{{--                            <p>SEO optimizing a couple of websites</p>--}}
+{{--                        </div><!-- /.timeline-body -->--}}
+{{--                    </div><!-- /.timeline-panel -->--}}
+{{--                </li>--}}
 
-                <!-- Timeline Badge  -->
-                <li class="timeline-end">
-                    <div class="rectangle"><span>More</span></div>
-                </li><!-- /.timeline-end -->
-            </ul><!-- /.timeline -->
-        </div>
-    </section><!-- /.section-history -->
-    <!-- End History section -->
+{{--                <!-- Timeline Badge  -->--}}
+{{--                <li class="timeline-end">--}}
+{{--                    <div class="rectangle"><span>More</span></div>--}}
+{{--                </li><!-- /.timeline-end -->--}}
+{{--            </ul><!-- /.timeline -->--}}
+{{--        </div>--}}
+{{--    </section><!-- /.section-history -->--}}
+{{--    <!-- End History section -->--}}
 
     <!-- Portfolio/Works section -->
     <section class="site-section section-works" id="works">
@@ -1015,7 +1026,7 @@
     </div>
 
     <div class="container text-center">
-        <p class="copyright">&copy; <a href="http://pixelperfect.mk/" target="_blank">PixelPerfect</a> - 2017</p>
+        <p class="copyright">&copy; <a href="#" target="_blank">WIZ TECH</a> - {{ date('Y') }}</p>
     </div>
 
 </footer><!-- /#footer -->
