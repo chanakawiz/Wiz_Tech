@@ -27,8 +27,8 @@
                     <li class="page-scroll"><a href="#about">About</a></li>
                     <li class="page-scroll"><a href="#services">Services</a></li>
                     <li class="page-scroll"><a href="#team">Team</a></li>
-                    <li class="page-scroll"><a href="#history">History</a></li>
-                    <li class="page-scroll"><a href="#works">Works</a></li>
+{{--                    <li class="page-scroll"><a href="#history">History</a></li>--}}
+{{--                    <li class="page-scroll"><a href="#works">Works</a></li>--}}
                     <li class="page-scroll"><a href="#contact">Contact</a></li>
 
                     @if(Auth::user())
